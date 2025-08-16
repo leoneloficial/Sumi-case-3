@@ -39,8 +39,9 @@ const handler = async (msg, { conn, args }) => {
 
   const mentionList = participants.map(p => `> ❀ @${p.id.split("@")[0]}`).join("\n");
   const extraMsg = args.join(" ");
-  let finalMsg = " ❀ INVOCACIÓN ❀";
-  finalMsg += "\n٩(͡๏̯͡๏)۶ 🩷 ٩(͡๏̯͡๏)۶";
+  let finalMsg = " *❀ INVOCACIÓN ❀*\n꒷︶꒷꒥꒷‧₊˚꒷︶꒷꒥꒷‧₊˚
+";
+  finalMsg += "\n ٩(͡๏̯͡๏)۶ 🩷 ٩(͡๏̯͡๏)۶";
   if (extraMsg.trim().length > 0) {
     finalMsg += `\n❑ Mensaje: ${extraMsg}\n\n`;
   } else {
