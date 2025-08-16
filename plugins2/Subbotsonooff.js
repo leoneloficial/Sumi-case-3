@@ -58,5 +58,5 @@ const handler = async (msg, { conn, command }) => {
 
 handler.command = ["bot on", "bot off"];
 handler.tags = ["grupo"];
-handler.help = ["subbotson", "subbotsoff"];
+handler.help = ["bot on", "bot off"];
 module.exports = handler;
