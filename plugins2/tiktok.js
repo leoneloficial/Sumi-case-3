@@ -45,10 +45,10 @@ const handler = async (msg, { conn, text, args, command }) => {
     const videoComments = videoData.comment || "0";
 
     const mensaje = ` *❀ Video de TikTok ❀* \n\n` +
-      `> ✦ *Título:* ${videoTitle}\n` +
-      `> ✰ *Autor:* ${videoAuthor}\n` +
-      `> ⴵ *Duración:* ${videoDuration}\n` +
-      `> ᰔ *Likes:* ${videoLikes} |> ❍ *Comentarios:* ${videoComments}\n\n` +
+      `> ✦ *Título:* » ${videoTitle}\n` +
+      `> ✰ *Autor:* » ${videoAuthor}\n` +
+      `> ⴵ *Duración:* » ${videoDuration}\n` +
+      `> ᰔ *Likes:* » ${videoLikes} |> ❍ *Comentarios:* » ${videoComments}\n\n` +
       ``;
 
     await conn.sendMessage(msg.key.remoteJid, {
