@@ -16,7 +16,7 @@ const handler = async (msg, { conn }) => {
 
   const ping = Date.now() - start;
 
-  const resultText = `❀ *Ping:*> ${ping} ms`;
+  const resultText = `❀ *Ping:*\n> ${ping} ms`;
 
   if (isGroup) {
     // Esperar un poco antes de editar (por seguridad de sincronización)
