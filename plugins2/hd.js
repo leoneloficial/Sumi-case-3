@@ -42,7 +42,7 @@ const handler = async (msg, { conn }) => {
         const quoted = msg.message?.extendedTextMessage?.contextInfo?.quotedMessage;
         if (!quoted) {
             return await conn.sendMessage(msg.key.remoteJid, {
-                text: "🚫 *Debes responder a una imagen con el comando* `.hd`"
+                text: " *❀ Debes responder a una imagen con el comando* `.hd`"
             }, { quoted: msg });
         }
 
@@ -50,7 +50,7 @@ const handler = async (msg, { conn }) => {
         const mime = quoted.imageMessage?.mimetype || "";
         if (!/image\/(jpe?g|png)/.test(mime)) {
             return await conn.sendMessage(msg.key.remoteJid, {
-                text: "⚠️ *Formato no soportado. Solo se permiten imágenes JPG/PNG*"
+                text: "✧ *Formato no soportado. Solo se permiten imágenes JPG/PNG*"
             }, { quoted: msg });
         }
 
@@ -83,7 +83,7 @@ const handler = async (msg, { conn }) => {
         // Enviar resultado
         await conn.sendMessage(msg.key.remoteJid, {
             image: enhancedImage,
-            caption: "🖼️ *Imagen mejorada con tecnología HD*\n\n💡 *Sugerencia:* Para mejores resultados use fotos con buena iluminación\n\n🤖 *Azura Ultra 2.0*"
+            caption: "*「✦」Imagen mejorada con tecnología HD*"
         }, { quoted: msg });
 
         // Reacción de éxito
@@ -96,7 +96,7 @@ const handler = async (msg, { conn }) => {
         
         let errorMessage = "❌ *Error al procesar la imagen*";
         if (error.message.includes("timeout")) {
-            errorMessage = "⌛ *El servidor tardó demasiado en responder. Intenta con una imagen más pequeña*";
+            errorMessage = "✧ *El servidor tardó demasiado en responder. Intenta con una imagen más pequeña*";
         }
 
         await conn.sendMessage(msg.key.remoteJid, {
