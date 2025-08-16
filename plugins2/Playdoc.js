@@ -26,7 +26,7 @@ const handler = async (msg, { conn, text }) => {
   }
 
   await conn.sendMessage(msg.key.remoteJid, {
-    react: { text: '⏳', key: msg.key }
+    react: { text: '🕐', key: msg.key }
   });
 
   try {
@@ -43,10 +43,10 @@ const handler = async (msg, { conn, text }) => {
 
     const infoMessage = ` *「✦」Título:* *${title}*
 
-> ⴵ *Duración:* ${fduration}
-> ✰ *Vistas:* ${views}
-> ✦ *Autor:* ${channel}
-> 🜸 *Enlace:* ${videoUrl}`;
+> ⴵ *Duración:* » ${fduration}
+> ✰ *Vistas:* » ${views}
+> ✦ *Autor:* » ${channel}
+> 🜸 *Enlace:* » ${videoUrl}`;
 
     await conn.sendMessage(msg.key.remoteJid, {
       image: { url: thumbnail },
