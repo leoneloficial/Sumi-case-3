@@ -19,12 +19,12 @@ const handler = async (msg, { conn, text }) => {
 
   if (!text) {
     return await conn.sendMessage(msg.key.remoteJid, {
-      text: `✳️ Usa el comando correctamente:\n\n📌 Ejemplo: *${usedPrefix}play2doc* La Factoría - Perdoname`
+      text: `❀ Usa el comando correctamente:\n\n> Ejemplo: *${usedPrefix}play2doc* La Factoría - Perdoname`
     }, { quoted: msg });
   }
 
   await conn.sendMessage(msg.key.remoteJid, {
-    react: { text: '⏳', key: msg.key }
+    react: { text: '🕐', key: msg.key }
   });
 
   try {
@@ -41,25 +41,12 @@ const handler = async (msg, { conn, text }) => {
     const author = videoInfo.channel || 'Desconocido';
     const videoLink = `https://www.youtube.com/watch?v=${videoInfo.id}`;
 
-    const captionPreview = `
-╔════════════════╗
-║ ✦ 𝘾𝙤𝙧𝙩𝙖𝙣𝙖 2.0 𝗦𝘂𝗯𝗯𝗼𝘁 ✦
-╚════════════════╝
+       const captionPreview = `*「✦」Título:* *${title}*
 
-📀 *Info del video:*  
-├ 🎼 *Título:* ${title}
-├ ⏱️ *Duración:* ${duration}
-├ 👁️ *Vistas:* ${views}
-├ 👤 *Autor:* ${author}
-└ 🔗 *Link:* ${videoLink}
-
-📥 *Opciones:*  
-┣ 🎵 _${usedPrefix}play1 ${text}_
-┣ 🎥 _${usedPrefix}play6 ${text}_
-┗ ⚠️ *¿No se reproduce?* Usa _${usedPrefix}ff_
-
-⏳ Procesando video...
-══════════════════════`;
+> ⴵ *Duración:* ${duration}
+> ✰ *Vistas:* ${views}
+> ✦ *Autor:* ${author}
+> 🜸 *Link:* ${videoLink}`;
 
     await conn.sendMessage(msg.key.remoteJid, {
       image: { url: thumbnail },
@@ -102,7 +89,7 @@ const handler = async (msg, { conn, text }) => {
       throw new Error('El video descargado está vacío o incompleto');
     }
 
-    const finalText = `🎬 Aquí tiene su video en documento.\n\n© Azura Ultra Subbot`;
+    const finalText = ``;
 
     await conn.sendMessage(msg.key.remoteJid, {
       document: fs.readFileSync(filePath),
@@ -128,5 +115,5 @@ const handler = async (msg, { conn, text }) => {
   }
 };
 
-handler.command = ['play2doc'];
+handler.command = ['play2'];
 module.exports = handler;
