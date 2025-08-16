@@ -30,9 +30,8 @@ const handler = async (msg, { conn, text, args, usedPrefix, command }) => {
     if (!fileResponse.ok) throw new Error("No se pudo descargar el archivo APK.");
     const fileBuffer = await fileResponse.buffer();
 
-    const caption = `「✦」 *Nombre:* ${apkInfo.name}
-
-\n` +
+    const caption = `*「✦」* *Nombre:* *${apkInfo.name}*
+` +
                     `❒ *Tamaño:* ${apkInfo.size}\n` +
                     `❀ *Rating:* ${apkInfo.rating}\n` +
                     `✧ *Instalaciones:* ${apkInfo.installs}\n` +
