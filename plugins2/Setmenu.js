@@ -14,7 +14,7 @@ const handler = async (msg, { conn, text }) => {
 
     if (!isFromSubbot) {
       return await conn.sendMessage(chatJid, {
-        text: "❌ Este comando solo puede ser usado por el *subbot desde su propio número* (grupo o privado).",
+        text: "✧ Este comando solo puede ser usado por el *subbot desde su propio número* (grupo o privado).",
       }, { quoted: msg });
     }
 
@@ -25,7 +25,7 @@ const handler = async (msg, { conn, text }) => {
 
     if (!imageMsg || !text) {
       return await conn.sendMessage(chatJid, {
-        text: `📌 *Uso correcto del comando:*\n\nResponde a una imagen con el comando:\n*setmenu NombreDelBot*\n\nEjemplo:\n> setmenu Azura Infinity`
+        text: `❀ *Uso correcto del comando:*\n\nResponde a una imagen con el comando:\n*setmenu NombreDelBot*\n\nEjemplo:\n> setmenu sumi sakurasawa`
       }, { quoted: msg });
     }
 
@@ -47,7 +47,7 @@ const handler = async (msg, { conn, text }) => {
     fs.writeFileSync(setMenuPath, JSON.stringify(data, null, 2));
 
     await conn.sendMessage(chatJid, {
-      text: `✅ Menú personalizado guardado como:\n*${text}*\n📸 Imagen aplicada correctamente.`,
+      text: `❀ Menú personalizado guardado como:\n*${text}*\n ✦Imagen aplicada correctamente.`,
       quoted: msg
     });
 
