@@ -25,7 +25,7 @@ const handler = async (msg, { conn, text }) => {
   }
 
   await conn.sendMessage(msg.key.remoteJid, {
-    react: { text: '⏳', key: msg.key }
+    react: { text: '🕐', key: msg.key }
   });
 
   try {
@@ -42,24 +42,12 @@ const handler = async (msg, { conn, text }) => {
     const author = videoInfo.channel || 'Desconocido';
     const videoLink = `https://www.youtube.com/watch?v=${videoInfo.id}`;
 
-    const captionPreview = `
+    const captionPreview = `*「✦」Título:* *${title}*
 
-   ✦ 𝘾𝙤𝙧𝙩𝙖𝙣𝙖 2.0 𝗦𝘂𝗯𝗯𝗼𝘁 ✦
-
-📀 *Info del video:*  
-❀ 🎼 *Título:* ${title}
-❀ ⏱️ *Duración:* ${duration}
-❀ 👁️ *Vistas:* ${views}
-❀ 👤 *Autor:* ${author}
-❀ 🔗 *Link:* ${videoLink}
-
-📥 *Opciones:*  
-❀ 🎵 _${usedPrefix}play1 ${text}_
-❀ 🎥 _${usedPrefix}play6 ${text}_
-❀ ⚠️ *¿No se reproduce?* Usa _${usedPrefix}ff_
-
-⏳ Procesando video...
-═════════════════════`;
+> ⴵ *Duración:* ${duration}
+> ✰ *Vistas:* ${views}
+> ✦ *Autor:* ${author}
+> 🜸 *Link:* ${videoLink}`;
 
     await conn.sendMessage(msg.key.remoteJid, {
       image: { url: thumbnail },
@@ -106,7 +94,7 @@ const handler = async (msg, { conn, text }) => {
       video: fs.readFileSync(filePath),
       mimetype: 'video/mp4',
       fileName: `${videoData.title}.mp4`,
-      caption: `🎬 Aquí tiene su video en calidad normal.\n\n© Cortana 2.0 Subbot`
+      caption: ``
     }, { quoted: msg });
 
     fs.unlinkSync(filePath);
@@ -126,5 +114,5 @@ const handler = async (msg, { conn, text }) => {
   }
 };
 
-handler.command = ['play2'];
+handler.command = ['playvideo'];
 module.exports = handler;
