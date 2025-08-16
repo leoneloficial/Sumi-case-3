@@ -15,7 +15,7 @@ const handler = async (msg, { conn, command }) => {
 
   if (!isGroup) {
     return await conn.sendMessage(chatId, {
-      text: "❌ Este comando solo se puede usar en grupos."
+      text: "✧ Este comando solo se puede usar en grupos."
     }, { quoted: msg });
   }
 
@@ -26,7 +26,7 @@ const handler = async (msg, { conn, command }) => {
 
   const alreadyOn = data.includes(chatId);
 
-  if (command === "subbotson") {
+  if (command === "bot on") {
     if (alreadyOn) {
       return await conn.sendMessage(chatId, {
         text: "ℹ️ El subbot ya está *activado* en este grupo."
@@ -40,7 +40,7 @@ const handler = async (msg, { conn, command }) => {
       text: "✅ *Subbot activado* en este grupo. Ahora responderá normalmente."
     }, { quoted: msg });
 
-  } else if (command === "subbotsoff") {
+  } else if (command === "bot off") {
     if (!alreadyOn) {
       return await conn.sendMessage(chatId, {
         text: "ℹ️ El subbot ya está *desactivado* en este grupo."
@@ -56,7 +56,7 @@ const handler = async (msg, { conn, command }) => {
   }
 };
 
-handler.command = ["subbotson", "subbotsoff"];
+handler.command = ["bot on", "bot off"];
 handler.tags = ["grupo"];
 handler.help = ["subbotson", "subbotsoff"];
 module.exports = handler;
