@@ -3,7 +3,7 @@ const fetch = require('node-fetch');
 const handler = async (msg, { conn, text, args, usedPrefix, command }) => {
   if (!args.length) {
     return await conn.sendMessage(msg.key.remoteJid, {
-      text: `⚠️ *Uso incorrecto.*\n📌 Ejemplo: \`${usedPrefix + command} whatsapp\``
+      text: `✧ *Uso incorrecto.*\n> Ejemplo: \`${usedPrefix + command} whatsapp\``
     }, { quoted: msg });
   }
 
@@ -11,7 +11,7 @@ const handler = async (msg, { conn, text, args, usedPrefix, command }) => {
   const apiUrl = `https://api.neoxr.eu/api/apk?q=${encodeURIComponent(query)}&no=1&apikey=russellxz`;
 
   await conn.sendMessage(msg.key.remoteJid, {
-    react: { text: "⏳", key: msg.key }
+    react: { text: "🕐", key: msg.key }
   });
 
   try {
@@ -30,16 +30,16 @@ const handler = async (msg, { conn, text, args, usedPrefix, command }) => {
     if (!fileResponse.ok) throw new Error("No se pudo descargar el archivo APK.");
     const fileBuffer = await fileResponse.buffer();
 
-    const caption = `📱 *Nombre:* ${apkInfo.name}\n` +
-                    `📦 *Tamaño:* ${apkInfo.size}\n` +
-                    `⭐ *Rating:* ${apkInfo.rating}\n` +
-                    `📥 *Instalaciones:* ${apkInfo.installs}\n` +
-                    `👨‍💻 *Desarrollador:* ${apkInfo.developer}\n` +
-                    `📂 *Categoría:* ${apkInfo.category}\n` +
-                    `🔄 *Versión:* ${apkInfo.version}\n` +
-                    `📅 *Actualizado:* ${apkInfo.updated}\n` +
-                    `📋 *Requisitos:* ${apkInfo.requirements}\n` +
-                    `🔗 *ID:* ${apkInfo.id}\n\n📲 *Descargado por Azura Ultra Subbot*`;
+    const caption = `✦ *Nombre:* ${apkInfo.name}\n` +
+                    `❒ *Tamaño:* ${apkInfo.size}\n` +
+                    `❀ *Rating:* ${apkInfo.rating}\n` +
+                    `✧ *Instalaciones:* ${apkInfo.installs}\n` +
+                    `❍ *Desarrollador:* ${apkInfo.developer}\n` +
+                    `❖ *Categoría:* ${apkInfo.category}\n` +
+                    `✰ *Versión:* ${apkInfo.version}\n` +
+                    `✎ *Actualizado:* ${apkInfo.updated}\n` +
+                    `⚘ *Requisitos:* ${apkInfo.requirements}\n` +
+                    🜸  *ID:* ${apkInfo.id}\n\n📲 *Descargado por Azura Ultra Subbot*`;
 
     await conn.sendMessage(msg.key.remoteJid, {
       image: { url: apkInfo.thumbnail },
