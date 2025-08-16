@@ -27,7 +27,7 @@ const handler = async (msg, { conn }) => {
 
     const personal = customData[subbotID];
     const imageBuffer = personal?.imagen ? Buffer.from(personal.imagen, "base64") : null;
-    const nombreMenu = personal?.nombre || "CORTANA 2.0 Subbot";
+    const nombreMenu = personal?.nombre || " 🤍 sumi sakurasawa 🤍`";
 
     let caption = "";
     let footer = "";
@@ -35,22 +35,25 @@ const handler = async (msg, { conn }) => {
     if (personal) {
   // MENÚ PERSONALIZADO DISEÑO BONITO
   caption = `
-╭─❍ 𓂃 𝑺𝒖𝒃𝒃𝒐𝒕 𝑷𝒆𝒓𝒔𝒐𝒏𝒂𝒍𝒊𝒛𝒂𝒅𝒐 ❍─╮
-│   𝙈𝙚𝙣𝙪́: *${nombreMenu}*
+
+│  ❀ NOMBRE: *${nombreMenu}*
 ╰────────────────────╯
+ ✎ 𝗜𝗻𝘁𝗲𝗹𝗶𝗴𝗲𝗻𝗰𝗶𝗮
+> ❀ ${usedPrefix}𝘤𝘩𝘢𝘵𝘨𝘱𝘵
+> ❀ ${usedPrefix}𝘨𝘦𝘮𝘪𝘯𝘪𝘴
 
-┏━━🧠 𝗜𝗻𝘁𝗲𝗹𝗶𝗴𝗲𝗻𝗰𝗶𝗮
-┃ ✦ ${usedPrefix}𝘤𝘩𝘢𝘵𝘨𝘱𝘵
-┃ ✦ ${usedPrefix}𝘨𝘦𝘮𝘪𝘯𝘪𝘴
-┗━━━━━━━━━━━━━
 
-┏━━📥 𝗗𝗲𝘀𝗰𝗮𝗿𝗴𝗮𝘀
-┃ ✦ ${usedPrefix}𝘱𝘭𝘢𝘺 / ${usedPrefix}𝘱𝘭𝘢𝘺𝘥𝘰𝘤
-┃ ✦ ${usedPrefix}𝘱𝘭𝘢𝘺2 / ${usedPrefix}𝘱𝘭𝘢𝘺2𝘥𝘰𝘤
-┃ ✦ ${usedPrefix}𝘺𝘵𝘮𝘱3 / ${usedPrefix}𝘺𝘵𝘮𝘱3𝘥𝘰𝘤
-┃ ✦ ${usedPrefix}𝘺𝘵𝘮𝘱4 / ${usedPrefix}𝘺𝘵𝘮𝘱4𝘥𝘰𝘤
-┃ ✦ ${usedPrefix}𝘢𝘱𝘬 / ${usedPrefix}𝘧𝘣 / ${usedPrefix}𝘪𝘨 / ${usedPrefix}𝘵𝘵
-┗━━━━━━━━━━━━━
+  ✎ 𝗗𝗲𝘀𝗰𝗮𝗿𝗴𝗮𝘀
+ ❀ ${usedPrefix}𝘱𝘭𝘢𝘺 / ${usedPrefix}play2
+> son en documentos
+ ✦ ${usedPrefix}𝘱𝘭𝘢𝘺audio / ${usedPrefix}playvideo
+> estos son normales 
+ ❀ ${usedPrefix}𝘺𝘵𝘮𝘱3 / ${usedPrefix}𝘺𝘵𝘮𝘱4
+> son normales 
+ ❀ ${usedPrefix}ytmp3doc / ${usedPrefix}ytmp4𝘥𝘰𝘤
+estos son en documento 
+ ❀ ${usedPrefix}𝘢𝘱𝘬 / ${usedPrefix}𝘧𝘣 / ${usedPrefix}𝘪𝘨 / ${usedPrefix}𝘵𝘵
+
 
 ┏━━🎭 𝗠𝘂𝗹𝘁𝗶𝗺𝗲𝗱𝗶𝗮
 ┃ ✦ ${usedPrefix}𝘴 / ${usedPrefix}𝘷𝘦𝘳 / ${usedPrefix}𝘩𝘥
