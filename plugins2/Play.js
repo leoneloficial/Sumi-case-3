@@ -107,5 +107,5 @@ const handler = async (msg, { conn, text }) => {
   }
 };
 
-handler.command = ['play'];
+handler.command = ['playaudio'];
 module.exports = handler;
