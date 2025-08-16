@@ -21,7 +21,7 @@ const handler = async (msg, { conn, text }) => {
 
   if (!text) {
     return await conn.sendMessage(msg.key.remoteJid, {
-      text: `✳️ Usa el comando correctamente:\n\n📌 Ejemplo: *${usedPrefix}playdoc* bad bunny diles`
+      text: `❀ Usa el comando correctamente:\n\n> Ejemplo: *${usedPrefix}play* bad bunny diles`
     }, { quoted: msg });
   }
 
@@ -41,26 +41,12 @@ const handler = async (msg, { conn, text }) => {
     const views = video.views.toLocaleString();
     const channel = video.author.name || 'Desconocido';
 
-    const infoMessage = `
-╔════════════════╗
-║ ✦ 𝗖𝗼𝗿𝘁𝗮𝗻𝗮 2.0 𝗦𝘂𝗯𝗯𝗼𝘁 ✦
-╚════════════════╝
+    const infoMessage = ` *「✦」Título:* *${title}*
 
-📀 *Info del audio:*  
-├ 🎼 *Título:* ${title}
-├ ⏱️ *Duración:* ${fduration}
-├ 👁️ *Vistas:* ${views}
-├ 👤 *Autor:* ${channel}
-└ 🔗 *Enlace:* ${videoUrl}
-
-📥 *Opciones:*  
-┣ 🎵 _${usedPrefix}play1 ${text}_
-┣ 🎥 _${usedPrefix}play2 ${text}_
-┣ 🎥 _${usedPrefix}play6 ${text}_
-┗ ⚠️ *¿No se reproduce?* Usa _${usedPrefix}ff_
-
-⏳ Procesando audio...
-══════════════════════`;
+> ⴵ *Duración:* ${fduration}
+> ✰ *Vistas:* ${views}
+> ✦ *Autor:* ${channel}
+> 🜸 *Enlace:* ${videoUrl}`;
 
     await conn.sendMessage(msg.key.remoteJid, {
       image: { url: thumbnail },
@@ -117,5 +103,5 @@ const handler = async (msg, { conn, text }) => {
   }
 };
 
-handler.command = ['playdoc'];
+handler.command = ['play'];
 module.exports = handler;
