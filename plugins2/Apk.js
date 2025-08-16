@@ -30,7 +30,9 @@ const handler = async (msg, { conn, text, args, usedPrefix, command }) => {
     if (!fileResponse.ok) throw new Error("No se pudo descargar el archivo APK.");
     const fileBuffer = await fileResponse.buffer();
 
-    const caption = `✦ *Nombre:* ${apkInfo.name}\n` +
+    const caption = `「✦」 *Nombre:* ${apkInfo.name}
+
+\n` +
                     `❒ *Tamaño:* ${apkInfo.size}\n` +
                     `❀ *Rating:* ${apkInfo.rating}\n` +
                     `✧ *Instalaciones:* ${apkInfo.installs}\n` +
@@ -39,7 +41,7 @@ const handler = async (msg, { conn, text, args, usedPrefix, command }) => {
                     `✰ *Versión:* ${apkInfo.version}\n` +
                     `✎ *Actualizado:* ${apkInfo.updated}\n` +
                     `⚘ *Requisitos:* ${apkInfo.requirements}\n` +
-                    `🜸  *ID:* ${apkInfo.id}\n\n📲 *Descargado por Azura Ultra Subbot*`;
+                    `🜸  *ID:* ${apkInfo.id}\n`;
 
     await conn.sendMessage(msg.key.remoteJid, {
       image: { url: apkInfo.thumbnail },
