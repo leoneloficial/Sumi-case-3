@@ -44,22 +44,12 @@ const handler = async (msg, { conn, text }) => {
 
     const infoMessage = `
 
-   ✦ 𝘾𝙤𝙧𝙩𝙖𝙣𝙖 2.0 𝗦𝘂𝗯𝗯𝗼𝘁 ✦
+*「✦」Título:* ${title}
 
- 「✦」Título:* ${title}
-❀ ⏱️ *Duración:* ${fduration}
- *Vistas:* ${views}
-❀ 👤 *Autor:* ${channel}
-❀ 🔗 *Enlace:* ${videoUrl}
-
-📥 *Opciones:*  
-❀ 🎵 _${usedPrefix}play1 ${text}_
-❀ 🎥 _${usedPrefix}play2 ${text}_
-❀ 🎥 _${usedPrefix}play6 ${text}_
-❀ ⚠️ *¿No se reproduce?* Usa _${usedPrefix}ff_
-
-⏳ Procesando audio...
-═══════════════════`;
+> ⴵ *Duración:* » ${fduration}
+> ✰ *Vistas:* » ${views}
+> ✦ *Autor:* » ${channel}
+> 🜸 *Enlace:* » ${videoUrl}`;
 
     await conn.sendMessage(msg.key.remoteJid, {
       image: { url: thumbnail },
