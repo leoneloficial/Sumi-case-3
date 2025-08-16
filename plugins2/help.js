@@ -36,7 +36,7 @@ const handler = async (msg, { conn }) => {
   // MENÚ PERSONALIZADO DISEÑO BONITO
   caption = `
   
-  Hola! soy *${nombreMenu}*
+    Hola! soy *${nombreMenu}*
 ╭┈ ↷
 │❀ Modo » PUBLICO
 │✦ Bot »  SUB BOT 
