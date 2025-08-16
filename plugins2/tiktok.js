@@ -15,13 +15,13 @@ const handler = async (msg, { conn, text, args, command }) => {
 
   if (!text) {
     return await conn.sendMessage(msg.key.remoteJid, {
-      text: `⚠️ *Ejemplo de uso:*\n📌 ${usedPrefix + command} https://vm.tiktok.com/ZMjdrFCtg/`
+      text: `❀ *Ejemplo de uso:*\n> ${usedPrefix + command} https://vm.tiktok.com/ZMjdrFCtg/`
     }, { quoted: msg });
   }
 
   if (!isUrl(args[0]) || !args[0].includes("tiktok")) {
     return await conn.sendMessage(msg.key.remoteJid, {
-      text: "❌ *Enlace de TikTok inválido.*"
+      text: " *✧ Enlace de TikTok inválido.*"
     }, { quoted: msg });
   }
 
@@ -44,12 +44,12 @@ const handler = async (msg, { conn, text, args, command }) => {
     const videoLikes = videoData.like || "0";
     const videoComments = videoData.comment || "0";
 
-    const mensaje = `🎥 *Video de TikTok* 🎥\n\n` +
-      `📌 *Título:* ${videoTitle}\n` +
-      `👤 *Autor:* ${videoAuthor}\n` +
-      `⏱️ *Duración:* ${videoDuration}\n` +
-      `❤️ *Likes:* ${videoLikes} | 💬 *Comentarios:* ${videoComments}\n\n` +
-      `───────\n🍧 *API utilizada:* https://api.dorratz.com\n© Azura Ultra & Cortana SubBot`;
+    const mensaje = ` *❀ Video de TikTok ❀* \n\n` +
+      `> ✦ *Título:* ${videoTitle}\n` +
+      `> ✰ *Autor:* ${videoAuthor}\n` +
+      `> ⴵ *Duración:* ${videoDuration}\n` +
+      `> ᰔ *Likes:* ${videoLikes} |> ❍ *Comentarios:* ${videoComments}\n\n` +
+      ``;
 
     await conn.sendMessage(msg.key.remoteJid, {
       video: { url: videoUrl },
@@ -62,7 +62,7 @@ const handler = async (msg, { conn, text, args, command }) => {
 
   } catch (error) {
     await conn.sendMessage(msg.key.remoteJid, {
-      text: "❌ *Ocurrió un error al procesar el enlace de TikTok.*\n🔹 _Inténtalo más tarde._"
+      text: " *✧ Ocurrió un error al procesar el enlace de TikTok.*\n🔹 _Inténtalo más tarde._"
     }, { quoted: msg });
 
     await conn.sendMessage(msg.key.remoteJid, {
