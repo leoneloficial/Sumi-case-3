@@ -37,10 +37,10 @@ const handler = async (msg, { conn, args }) => {
     }, { quoted: msg });
   }
 
-  const mentionList = participants.map(p => `➥ @${p.id.split("@")[0]}`).join("\n");
+  const mentionList = participants.map(p => `❀ @${p.id.split("@")[0]}`).join("\n");
   const extraMsg = args.join(" ");
-  let finalMsg = "━〔 *📢 INVOCACIÓN 📢* 〕━➫\n";
-  finalMsg += "٩(͡๏̯͡๏)۶ Por cortana 2.0 SubBot ٩(͡๏̯͡๏)۶\n";
+  let finalMsg = " *❀ INVOCACIÓN ❀*";
+  finalMsg += "٩(͡๏̯͡๏)۶ 🩷 ٩(͡๏̯͡๏)۶\n";
   if (extraMsg.trim().length > 0) {
     finalMsg += `\n❑ Mensaje: ${extraMsg}\n\n`;
   } else {
