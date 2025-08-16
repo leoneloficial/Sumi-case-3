@@ -9,13 +9,13 @@ const handler = async (msg, { conn, args }) => {
 
   if (!chatId.endsWith("@g.us")) {
     return conn.sendMessage(chatId, {
-      text: "❌ Este comando solo puede usarse en grupos."
+      text: "✧ Este comando solo puede usarse en grupos."
     }, { quoted: msg });
   }
 
   if (!args[0] || !['on', 'off'].includes(args[0])) {
     return conn.sendMessage(chatId, {
-      text: "⚙️ Usa el comando así:\n\n📌 *modoadmins on* (activar)\n📌 *modoadmins off* (desactivar)"
+      text: " Usa el comando así:\n\n> *modoadmins on* (activar)\n> *modoadmins off* (desactivar)"
     }, { quoted: msg });
   }
 
@@ -28,7 +28,7 @@ const handler = async (msg, { conn, args }) => {
 
     if (!isAdmin && !isOwner) {
       return conn.sendMessage(chatId, {
-        text: "❌ Solo los administradores del grupo o el owner del bot pueden usar este comando."
+        text: "✧ Solo los administradores del grupo o el owner del bot pueden usar este comando."
       }, { quoted: msg });
     }
 
@@ -46,12 +46,12 @@ const handler = async (msg, { conn, args }) => {
     if (args[0] === 'on') {
       data.modoadmins[subbotID][chatId] = true;
       await conn.sendMessage(chatId, {
-        text: "✅ Modo solo admins *activado* en este grupo."
+        text: "❀ Modo solo admins *activado* en este grupo."
       }, { quoted: msg });
     } else {
       delete data.modoadmins[subbotID][chatId];
       await conn.sendMessage(chatId, {
-        text: "✅ Modo solo admins *desactivado* en este grupo."
+        text: "❀ Modo solo admins *desactivado* en este grupo."
       }, { quoted: msg });
     }
 
