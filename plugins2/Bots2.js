@@ -35,14 +35,14 @@ const handler = async (msg, { conn }) => {
     const prefijo = dataPrefijos[fullJid] || ".";
     const sensurado = `+${jid.slice(0, 3)}*****${jid.slice(-2)}`;
 
-    return `「✦」 *Subbot ${i + 1}*
+    return `❀ *Subbot ${i + 1}*
 > ❀ Número: ${sensurado}
 > ❀ Prefijo: *${prefijo}*`;
   });
 
   const menu = `
-> ❀ Total conectados: *${total}/${maxSubbots}*
-> ❀ Sesiones libres: *${disponibles}*
+> 「✦」 Total conectados: *${total}/${maxSubbots}*
+ ❀ Sesiones libres: *${disponibles}*
 
 ${lista.join("\n\n")}`;
 
