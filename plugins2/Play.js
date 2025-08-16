@@ -42,7 +42,7 @@ const handler = async (msg, { conn, text }) => {
     const views = video.views.toLocaleString();
     const channel = video.author.name || 'Desconocido';
 
-    const infoMessage = `*「✦」Título:* ${title}
+    const infoMessage = `*「✦」Título: ${title}*
 
 > ⴵ *Duración:* » ${fduration}
 > ✰ *Vistas:* » ${views}
