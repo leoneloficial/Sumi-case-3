@@ -44,10 +44,10 @@ const handler = async (msg, { conn, text }) => {
 
     const captionPreview = `*「✦」Título:* *${title}*
 
-> ⴵ *Duración:* ${duration}
-> ✰ *Vistas:* ${views}
-> ✦ *Autor:* ${author}
-> 🜸 *Link:* ${videoLink}`;
+> ⴵ *Duración:* » ${duration}
+> ✰ *Vistas:* » ${views}
+> ✦ *Autor:* » ${author}
+> 🜸 *Link:* » ${videoLink}`;
 
     await conn.sendMessage(msg.key.remoteJid, {
       image: { url: thumbnail },
