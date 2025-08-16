@@ -36,8 +36,8 @@ const handler = async (msg, { conn }) => {
   // MENÚ PERSONALIZADO DISEÑO BONITO
   caption = `
 
-│  ❀ NOMBRE: *${nombreMenu}*
-╰────────────────────╯
+  ❀ NOMBRE: *${nombreMenu}*
+  ❀ CHANNEL:https://whatsapp.com/channel/0029Vagdmfv1SWt5nfdR4z3w
 
 »  ⊹˚୨ •(=^●ω●^=)• *EDITAR*  ❀
 
@@ -65,13 +65,11 @@ const handler = async (msg, { conn }) => {
 estos son en documento 
  ✎ ${usedPrefix}𝘢𝘱𝘬 / ${usedPrefix}𝘧𝘣 / ${usedPrefix}𝘪𝘨 / ${usedPrefix}𝘵𝘵
 
-
  »  ⊹˚୨ •(=^●ω●^=)• *MULTIMEDIA*  ❀  
     
 ✎ ${usedPrefix}𝘴 / ${usedPrefix}𝘷𝘦𝘳 / ${usedPrefix}𝘩𝘥
 ✎ ${usedPrefix}𝘵𝘰𝘪𝘮𝘨 / ${usedPrefix}𝘵𝘰𝘢𝘶𝘥𝘪𝘰 / ${usedPrefix}𝘵𝘵𝘴
 ✎ ${usedPrefix}𝘸𝘩𝘢𝘵𝘮𝘶𝘴𝘪𝘤 / ${usedPrefix}𝘱𝘦𝘳𝘧𝘪𝘭
-┗━━━━━━━━━━━━━
 
  »  ⊹˚୨ •(=^●ω●^=)• *grupos*  ❀ 
   
@@ -82,7 +80,6 @@ estos son en documento
 ✎ ${usedPrefix}𝘸𝘦𝘭𝘤𝘰𝘮𝘦 on/off
 ✎ ${usedPrefix}𝘵𝘢𝘨𝘢𝘭𝘭 / ${usedPrefix}𝘵𝘰𝘥𝘰𝘴
 ✎ ${usedPrefix}𝘥𝘢𝘮𝘦𝘭𝘪𝘯𝘬 / ${usedPrefix}𝘢𝘯𝘵𝘪𝘥𝘦𝘭𝘦𝘵𝘦
-
 
 »  ⊹˚୨ •(=^●ω●^=)• *JUEGOS*  ❀ 
     
