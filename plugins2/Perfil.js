@@ -3,7 +3,7 @@ const handler = async (msg, { conn, text, usedPrefix }) => {
     let userJid = null;
 
     await conn.sendMessage(msg.key.remoteJid, {
-      react: { text: "📸", key: msg.key }
+      react: { text: "🩶", key: msg.key }
     });
 
     const hasMention = msg.message?.extendedTextMessage?.contextInfo?.mentionedJid?.length > 0;
