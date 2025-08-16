@@ -22,12 +22,12 @@ const handler = async (msg, { conn, text }) => {
 
   if (!text) {
     return await conn.sendMessage(msg.key.remoteJid, {
-      text: `✳️ Usa el comando correctamente:\n\n📌 Ejemplo: *${usedPrefix}play* bad bunny diles`
+      text: `❀ Usa el comando correctamente:\n\n> Ejemplo: *${usedPrefix}play* bad bunny diles`
     }, { quoted: msg });
   }
 
   await conn.sendMessage(msg.key.remoteJid, {
-    react: { text: '⏳', key: msg.key }
+    react: { text: '🕐', key: msg.key }
   });
 
   try {
@@ -46,10 +46,9 @@ const handler = async (msg, { conn, text }) => {
 
    ✦ 𝘾𝙤𝙧𝙩𝙖𝙣𝙖 2.0 𝗦𝘂𝗯𝗯𝗼𝘁 ✦
 
-📀 *Info del audio:*  
-❀ 🎼 *Título:* ${title}
+ 「✦」Título:* ${title}
 ❀ ⏱️ *Duración:* ${fduration}
-❀ 👁️ *Vistas:* ${views}
+ *Vistas:* ${views}
 ❀ 👤 *Autor:* ${channel}
 ❀ 🔗 *Enlace:* ${videoUrl}
 
