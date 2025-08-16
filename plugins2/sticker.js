@@ -24,7 +24,7 @@ const handler = async (msg, { conn }) => {
     const quoted = msg.message?.extendedTextMessage?.contextInfo?.quotedMessage;
     if (!quoted) {
       return await conn.sendMessage(msg.key.remoteJid, {
-        text: `⚠️ *Responde a una imagen o video con el comando \`${usedPrefix}s\` para crear un sticker.*`
+        text: `*❀ Por favor, envía una imagen o video para hacer un sticker.*`
       }, { quoted: msg });
     }
 
