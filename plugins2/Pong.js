@@ -10,15 +10,13 @@ const handler = async (msg, { conn }) => {
 
   const sent = await conn.sendMessage(
     msg.key.remoteJid,
-    { text: "🏓 *Pong...* (calculando ping)" },
+    { text: "❀ *Ping...* (calculando ping)" },
     { quoted: msg }
   );
 
   const ping = Date.now() - start;
 
-  const resultText = `🏓 *Pong chucha ya este subbot anda activo pa culiar 🍑 con una culona; tráeme a tu mamá o hermana, perro 🐕!. Soy tan Rápido Como Tu Novia cuando Te dejó 😆*
-
-✅ *Ping:* ${ping} ms`;
+  const resultText = `❀ *Ping:* > ${ping} ms`;
 
   if (isGroup) {
     // Esperar un poco antes de editar (por seguridad de sincronización)
