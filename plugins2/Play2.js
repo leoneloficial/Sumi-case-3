@@ -20,7 +20,7 @@ const handler = async (msg, { conn, text }) => {
 
   if (!text) {
     return await conn.sendMessage(msg.key.remoteJid, {
-      text: `✳️ Usa el comando correctamente:\n\n📌 Ejemplo: *${usedPrefix}play2* La Factoría - Perdoname`
+      text: `❀ Usa el comando correctamente:\n\n> Ejemplo: *${usedPrefix}playvideo* La Factoría - Perdoname`
     }, { quoted: msg });
   }
 
