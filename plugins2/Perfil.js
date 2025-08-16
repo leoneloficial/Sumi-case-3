@@ -12,15 +12,7 @@ const handler = async (msg, { conn, text, usedPrefix }) => {
 
     if (!hasMention && !hasParticipant && !cleanText) {
       return await conn.sendMessage(msg.key.remoteJid, {
-        text: `🔍 *¿Cómo usar el comando ${usedPrefix}perfil?*\n\n` +
-              `📌 *Ejemplos de uso:*\n\n` +
-              `🔹 *Para obtener la foto de perfil de alguien:* \n` +
-              `   - *Responde a su mensaje con:* _${usedPrefix}perfil_\n\n` +
-              `🔹 *Para obtener la foto de perfil de un número:* \n` +
-              `   - _${usedPrefix}perfil +1 555-123-4567_\n\n` +
-              `🔹 *Para obtener la foto de perfil de un usuario mencionado:* \n` +
-              `   - _${usedPrefix}perfil @usuario_\n\n` +
-              `⚠️ *Nota:* Algunos usuarios pueden tener su foto de perfil privada.`
+        text: `❀ etiquete o mencione a un número para ver la foto de su perfil`
       }, { quoted: msg });
     }
 
