@@ -36,7 +36,7 @@ const handler = async (msg, { conn, text, usedPrefix }) => {
 
     await conn.sendMessage(msg.key.remoteJid, {
       image: { url: ppUrl },
-      caption: `🖼️ *Foto de perfil de:* @${userJid.split("@")[0]}`,
+      caption: `*「✦」* *Foto de perfil de:* @${userJid.split("@")[0]}`,
       mentions: [userJid]
     }, { quoted: msg });
 
