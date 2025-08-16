@@ -31,7 +31,7 @@ const handler = async (msg, { conn, text, args, usedPrefix, command }) => {
     const fileBuffer = await fileResponse.buffer();
 
     const caption = `*「✦」* *Nombre:* *${apkInfo.name}*
-n\` +
+\n` +
                     `❒ *Tamaño:* ${apkInfo.size}\n` +
                     `❀ *Rating:* ${apkInfo.rating}\n` +
                     `✧ *Instalaciones:* ${apkInfo.installs}\n` +
