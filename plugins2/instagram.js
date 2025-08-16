@@ -23,7 +23,7 @@ const handler = async (msg, { conn, text, command }) => {
   try {
     // ⏳ Reacción mientras se procesa
     await conn.sendMessage(msg.key.remoteJid, {
-      react: { text: "⏳", key: msg.key }
+      react: { text: "🕐", key: msg.key }
     });
 
     const apiUrl = `https://api.dorratz.com/igdl?url=${text}`;
