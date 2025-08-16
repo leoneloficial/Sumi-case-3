@@ -14,7 +14,7 @@ const handler = async (msg, { conn }) => {
 
   if (!msg.key.remoteJid.includes("@g.us")) {
     return await conn.sendMessage(msg.key.remoteJid, {
-      text: "❌ *Este comando solo funciona en grupos.*"
+      text: " *✧ Este comando solo funciona en grupos.*"
     }, { quoted: msg });
   }
 
@@ -31,14 +31,14 @@ const handler = async (msg, { conn }) => {
 
   if (!isAdmin && !isOwner) {
     return await conn.sendMessage(msg.key.remoteJid, {
-      text: "🚫 *No tienes permisos para abrir el grupo.*\n⚠️ *Solo administradores o el dueño del bot pueden usar este comando.*"
+      text: "❀ *No tienes permisos para abrir el grupo.*\n> *Solo administradores o el dueño del bot pueden usar este comando.*"
     }, { quoted: msg });
   }
 
   await conn.groupSettingUpdate(msg.key.remoteJid, "not_announcement");
 
   return await conn.sendMessage(msg.key.remoteJid, {
-    text: "🔓 *El grupo ha sido abierto.*\n📢 *Todos los miembros pueden enviar mensajes ahora.*"
+    text: "*❀ El grupo ha sido abierto.*\n> *Todos los miembros pueden enviar mensajes ahora.*"
   }, { quoted: msg });
 };
 
