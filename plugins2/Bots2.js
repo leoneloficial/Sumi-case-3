@@ -41,7 +41,7 @@ const handler = async (msg, { conn }) => {
   });
 
   const menu = `
-> 「✦」 Total conectados: *${total}/${maxSubbots}*
+ 「✦」 Total conectados: *${total}/${maxSubbots}*
  ❀ Sesiones libres: *${disponibles}*
 
 ${lista.join("\n\n")}`;
