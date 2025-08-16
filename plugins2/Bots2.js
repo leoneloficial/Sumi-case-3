@@ -14,7 +14,7 @@ const handler = async (msg, { conn }) => {
   if (subDirs.length === 0) {
     return await conn.sendMessage2(
       msg.key.remoteJid,
-      "⚠️ No hay subbots conectados actualmente.",
+      "✧ No hay subbots conectados actualmente.",
       msg
     );
   }
@@ -35,16 +35,14 @@ const handler = async (msg, { conn }) => {
     const prefijo = dataPrefijos[fullJid] || ".";
     const sensurado = `+${jid.slice(0, 3)}*****${jid.slice(-2)}`;
 
-    return `╭➤ *Subbot ${i + 1}*
-│ Número: ${sensurado}
-│ Prefijo: *${prefijo}*
-╰───────────────`;
+    return `「✦」 *Subbot ${i + 1}*
+> ❀ Número: ${sensurado}
+> ❀ Prefijo: *${prefijo}*`;
   });
 
-  const menu = `╭━〔 *CORTANA 2.0 BOT* 〕━⬣
-│ 🤖 Total conectados: *${total}/${maxSubbots}*
-│ 🟢 Sesiones libres: *${disponibles}*
-╰━━━━━━━━━━━━⬣
+  const menu = `
+> ❀ Total conectados: *${total}/${maxSubbots}*
+> ❀ Sesiones libres: *${disponibles}*
 
 ${lista.join("\n\n")}`;
 
