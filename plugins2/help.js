@@ -36,8 +36,8 @@ const handler = async (msg, { conn }) => {
   // MENÚ PERSONALIZADO DISEÑO BONITO
   caption = `
 
-  ❀ NOMBRE: *${nombreMenu}*
-  ❀ CHANNEL:https://whatsapp.com/channel/0029Vagdmfv1SWt5nfdR4z3w
+ ❀ NOMBRE: *${nombreMenu}*
+ ❀ CHANNEL: https://whatsapp.com/channel/0029Vagdmfv1SWt5nfdR4z3w
 
 »  ⊹˚୨ •(=^●ω●^=)• *EDITAR*  ❀
 
