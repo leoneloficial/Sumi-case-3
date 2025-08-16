@@ -184,7 +184,7 @@ estos son en documento
     await conn.sendMessage(
       msg.key.remoteJid,
       {
-        image: imageBuffer ? imageBuffer : { url: `https://cdn.russellxz.click/139f04e1.jpeg` },
+        image: imageBuffer ? imageBuffer : { url: `https://cdn.russellxz.click/059f423b.jpeg` },
         caption,
       },
       { quoted: msg }
