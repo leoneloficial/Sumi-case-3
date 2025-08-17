@@ -24,7 +24,7 @@ const handler = async (msg, { conn }) => {
   const quotedMsg = msg.message?.extendedTextMessage?.contextInfo?.quotedMessage;
   if (!quotedMsg || (!quotedMsg.audioMessage && !quotedMsg.videoMessage)) {
     await conn.sendMessage(msg.key.remoteJid, {
-      text: `✳️ Responde a una *nota de voz*, *audio* o *video* para identificar la canción.`
+      text: `*❀ Responde a una *nota de voz*, *audio* o *video* para identificar la canción.*`
     }, { quoted: msg });
     return;
   }
@@ -67,25 +67,18 @@ const handler = async (msg, { conn }) => {
     const video = ytSearch.videos[0];
     if (!video) throw new Error("No se encontró la canción en YouTube");
 
-    const banner = `
-╔══════════════════╗
-║ ✦ 𝗔𝘇𝘂𝗿𝗮 𝗨𝗹𝘁𝗿𝗮 𝟮.𝟬 𝗦𝘂𝗯𝗯𝗼𝘁 ✦
-╚══════════════════╝
+    const banner = `*「✦」Título:* *${title}*
 
-🎵 *Canción detectada:*  
-╭───────────────╮  
-├ 📌 *Título:* ${title}
-├ 👤 *Artista:* ${artist}
-├ 💿 *Álbum:* ${album}
-├ 📅 *Lanzamiento:* ${release}
-├ 🔎 *Buscando:* ${video.title}
-├ ⏱️ *Duración:* ${video.timestamp}
-├ 👁️ *Vistas:* ${video.views.toLocaleString()}
-├ 📺 *Canal:* ${video.author.name}
-├ 🔗 *Link:* ${video.url}
-╰───────────────╯
+> ✦ *Artista:* ${artist}
+> ☕︎︎ *Álbum:* ${album}
+> ✎ *Lanzamiento:* ${release}
+> ☄︎ *Buscando:* ${video.title}
+> ⴵ *Duración:* ${video.timestamp}
+> ✰ *Vistas:* ${video.views.toLocaleString()}
+> ✧ *Canal:* ${video.author.name}
+> 🜸 *Link:* ${video.url}
 
-⏳ *Espere un momento, descargando la canción...*`;
+ *❀ Espere un momento, descargando la canción...*`;
 
     await conn.sendMessage(msg.key.remoteJid, {
       image: { url: video.thumbnail },
