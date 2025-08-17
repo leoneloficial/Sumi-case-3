@@ -5,7 +5,7 @@ const handler = async (msg, { conn }) => {
     const quoted = msg.message?.extendedTextMessage?.contextInfo?.quotedMessage;
     if (!quoted) {
       return await conn.sendMessage(msg.key.remoteJid, {
-        text: "❌ *Error:* Debes responder a una imagen, video o nota de voz para reenviarla."
+        text: " *❀ Debes responder a una imagen, video o nota de voz para reenviarla.*"
       }, { quoted: msg });
     }
 
