@@ -26,5 +26,5 @@ const handler = async (msg, { conn }) => {
   }
 };
 
-handler.command = ["Damelink"];
+handler.command = ["damelink"];
 module.exports = handler;
