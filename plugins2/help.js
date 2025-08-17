@@ -84,7 +84,7 @@ estos son en documento
 ✎ ${usedPrefix}𝘢𝘯𝘵𝘪𝘭𝘪𝘯𝘬 on/off
 ✎ ${usedPrefix}𝘸𝘦𝘭𝘤𝘰𝘮𝘦 on/off
 ✎ ${usedPrefix}𝘵𝘢𝘨𝘢𝘭𝘭 / ${usedPrefix}𝘵𝘰𝘥𝘰𝘴
-✎ ${usedPrefix}𝘥𝘢𝘮𝘦𝘭𝘪𝘯𝘬 / ${usedPrefix}𝘢𝘯𝘵𝘪𝘥𝘦𝘭𝘦𝘵𝘦
+✎ ${usedPrefix}𝘭𝘪𝘯𝘬 / ${usedPrefix}𝘢𝘯𝘵𝘪𝘥𝘦𝘭𝘦𝘵𝘦
 
 »  ⊹˚୨ •(=^●ω●^=)• *JUEGOS*  ❀ 
     
