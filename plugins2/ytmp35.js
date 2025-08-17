@@ -62,7 +62,7 @@ const handler = async (msg, { conn, text }) => {
     // Validar texto de entrada
     if (!text) {
         return await conn.sendMessage(msg.key.remoteJid, {
-            text: `✳️ Uso correcto:\n\n📌 Ejemplo: *${global.prefix}ytmp35* Bad Bunny - Diles`
+            text: `❀ Uso correcto:\n\n> Ejemplo: *${global.prefix}ytmp35* Bad Bunny - Diles`
         }, { quoted: msg });
     }
 
@@ -91,14 +91,10 @@ const handler = async (msg, { conn, text }) => {
         // Enviar información del audio
         await conn.sendMessage(msg.key.remoteJid, {
             image: { url: thumbnail },
-            caption: `╭───〔 🎵 *AZURA ULTRA 2.0* 〕───╮
-│
-│ 📌 *Título:* ${title}
-│ ⏱️ *Duración:* ${timestamp}
-│
-│ ⏳ *Procesando tu audio...*
-│
-╰───────────────────────╯`
+            caption: `*「✦」Título:* *${title}*
+ > ⴵ *Duración:* ${timestamp}
+
+  *❀ descargando tu audio...*`
         }, { quoted: msg });
 
         // Descargar audio
