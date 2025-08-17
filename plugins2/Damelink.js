@@ -3,7 +3,7 @@ const handler = async (msg, { conn }) => {
 
   if (!chatId.endsWith("@g.us")) {
     return await conn.sendMessage(chatId, {
-      text: "⚠️ Este comando solo funciona en grupos."
+      text: "❀ Este comando solo funciona en grupos."
     }, { quoted: msg });
   }
 
@@ -16,12 +16,12 @@ const handler = async (msg, { conn }) => {
     const link = `https://chat.whatsapp.com/${code}`;
 
     await conn.sendMessage(chatId, {
-      text: `🔗 *Enlace del grupo:*\n${link}`
+      text: `> *❀ Enlace del grupo: ❀*\n${link}`
     }, { quoted: msg });
 
   } catch (e) {
     await conn.sendMessage(chatId, {
-      text: "❌ No se pudo obtener el enlace. Asegúrate de ser administrador."
+      text: "✧ No se pudo obtener el enlace. Asegúrate de ser administrador."
     }, { quoted: msg });
   }
 };
