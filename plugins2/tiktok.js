@@ -48,7 +48,8 @@ const handler = async (msg, { conn, text, args, command }) => {
       `> ✦ *Título:* » ${videoTitle}\n` +
       `> ✰ *Autor:* » ${videoAuthor}\n` +
       `> ⴵ *Duración:* » ${videoDuration}\n` +
-      `> ᰔ *Likes:* » ${videoLikes} |> ❍ *Comentarios:* » ${videoComments}\n\n` +
+      `> ᰔ *Likes:* » ${videoLikes} 
+> ❍ *Comentarios:* » ${videoComments}\n\n` +
       ``;
 
     await conn.sendMessage(msg.key.remoteJid, {
