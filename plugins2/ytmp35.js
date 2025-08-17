@@ -92,7 +92,7 @@ const handler = async (msg, { conn, text }) => {
         await conn.sendMessage(msg.key.remoteJid, {
             image: { url: thumbnail },
             caption: `*「✦」Título:* *${title}*
- > ⴵ *Duración:* ${timestamp}
+  ⴵ *Duración:* ${timestamp}
 
   *❀ descargando tu audio...*`
         }, { quoted: msg });
