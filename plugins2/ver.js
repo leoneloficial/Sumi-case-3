@@ -38,7 +38,7 @@ const handler = async (msg, { conn }) => {
       mediaMsg = inner.audioMessage || inner.voiceMessage || inner.pttMessage;
     } else {
       return await conn.sendMessage(msg.key.remoteJid, {
-        text: "❌ *Error:* El mensaje citado no contiene un archivo compatible."
+        text: " *Error: El mensaje citado no contiene un archivo compatible.*"
       }, { quoted: msg });
     }
 
@@ -50,7 +50,7 @@ const handler = async (msg, { conn }) => {
     let buf = Buffer.alloc(0);
     for await (const chunk of stream) buf = Buffer.concat([buf, chunk]);
 
-    const credit = "\n``";
+    const credit = "";
     const opts = { mimetype: mediaMsg.mimetype };
 
     if (mediaType === "image") {
