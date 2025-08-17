@@ -11,7 +11,7 @@ const handler = async (msg, { conn }) => {
         
         if (!quoted) {
             return await conn.sendMessage(msg.key.remoteJid, { 
-                text: "⚠️ *Responde a un video o audio con el comando* `.toaudio` *para convertirlo a MP3.*" 
+                text: " *❀ Responde a un video o audio con el comando* `.toaudio` *para convertirlo a MP3.*" 
             }, { quoted: msg });
         }
 
@@ -20,7 +20,7 @@ const handler = async (msg, { conn }) => {
         
         if (!mediaType) {
             return await conn.sendMessage(msg.key.remoteJid, { 
-                text: "⚠️ *Solo puedes convertir videos o audios a MP3.*" 
+                text: " *✧ Solo puedes convertir videos o audios a MP3.*" 
             }, { quoted: msg });
         }
 
@@ -92,7 +92,7 @@ const handler = async (msg, { conn }) => {
     } catch (error) {
         console.error("Error en el comando toaudio:", error);
         await conn.sendMessage(msg.key.remoteJid, { 
-            text: "❌ *Hubo un error al convertir el contenido a MP3. Asegúrate que es un video o audio válido.*" 
+            text: " *✧ Hubo un error al convertir el contenido a MP3. Asegúrate que es un video o audio válido.*" 
         }, { quoted: msg });
     }
 };
