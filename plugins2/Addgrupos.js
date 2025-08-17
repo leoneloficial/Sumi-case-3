@@ -9,7 +9,7 @@ const handler = async (msg, { conn }) => {
   const groupID = msg.key.remoteJid;
   if (!groupID.endsWith("@g.us")) {
     return await conn.sendMessage(groupID, {
-      text: "⚠️ Este comando solo se puede usar dentro de un grupo.\n\n🛠️ *Sirve para activar el subbot en este grupo*."
+      text: "*❀ Este comando solo se puede usar dentro de un grupo.*\n\n> *Sirve para activar el subbot en este grupo*."
     }, { quoted: msg });
   }
 
@@ -28,7 +28,7 @@ const handler = async (msg, { conn }) => {
 
   if (!isAdmin) {
     return await conn.sendMessage(groupID, {
-      text: "⛔ Solo *administradores del grupo* pueden usar este comando."
+      text: "❀ Solo *administradores del grupo* pueden usar este comando."
     }, { quoted: msg });
   }
 
@@ -52,7 +52,7 @@ const handler = async (msg, { conn }) => {
 
   if (data[subbotID].includes(groupID)) {
     return await conn.sendMessage(groupID, {
-      text: "ℹ️ Este grupo ya está autorizado para usar el subbot."
+      text: "*❀ Este grupo ya está autorizado para usar el subbot.*"
     }, { quoted: msg });
   }
 
@@ -60,7 +60,7 @@ const handler = async (msg, { conn }) => {
   fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
 
   await conn.sendMessage(groupID, {
-    text: "✅ *Grupo autorizado correctamente.* Ahora el subbot responderá a todos los usuarios en este grupo. 💠"
+    text: " *❀ Grupo autorizado correctamente.*> Ahora el subbot responderá a todos los usuarios en este grupo."
   }, { quoted: msg });
 };
 
