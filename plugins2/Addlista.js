@@ -11,7 +11,7 @@ const handler = async (msg, { conn, text }) => {
 
   if (!fromMe) {
     return await conn.sendMessage(msg.key.remoteJid, {
-      text: "⛔ Solo el *dueño del subbot* puede usar este comando."
+      text: "❀ Solo el *dueño del subbot* puede usar este comando."
     }, { quoted: msg });
   }
 
@@ -24,7 +24,7 @@ const handler = async (msg, { conn, text }) => {
 
   if (!target) {
     return await conn.sendMessage(msg.key.remoteJid, {
-      text: "⚠️ Cita el mensaje del usuario o escribe su número. que quieres agregar a la lista para que el subbots le responda en privado💠"
+      text: "❀ Cita el mensaje del usuario o escribe su número. que quieres agregar a la lista para que el subbots le responda en privado"
     }, { quoted: msg });
   }
 
@@ -47,7 +47,7 @@ const handler = async (msg, { conn, text }) => {
 
   if (data[subbotID].includes(target)) {
     return await conn.sendMessage(msg.key.remoteJid, {
-      text: "ℹ️ Ese número ya está en tu lista."
+      text: "❀ Ese número ya está en tu lista."
     }, { quoted: msg });
   }
 
@@ -55,7 +55,7 @@ const handler = async (msg, { conn, text }) => {
   fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
 
   await conn.sendMessage(msg.key.remoteJid, {
-    text: `✅ Usuario *${target}* agregado a tu lista a hora el subbots le respondera a los comandos💠.`
+    text: `❀ Usuario *${target}* agregado a tu lista a hora el subbots le respondera a los comandos.`
   }, { quoted: msg });
 };
 
