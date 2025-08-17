@@ -27,7 +27,7 @@ const handler = async (msg, { conn, args }) => {
 
     if (!args[0] || !['on', 'off'].includes(args[0])) {
       return conn.sendMessage(chatId, {
-        text: "❀ Usa el comando así:\n\n> .antilink on*  (activar)\n *antilink off* (desactivar)"
+        text: "❀ Usa el comando así:\n\n> *antilink on*  (activar)\n> *antilink off* (desactivar)"
       }, { quoted: msg });
     }
 
